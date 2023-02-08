@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        public: true
+
+    YsTools\Bundle\OroCommerceElfsightBundle\Controller\ElfsightWidgetController:
+        calls:
+            - ['setContainer', ['@Psr\Container\ContainerInterface']]
+        tags:
+            - { name: container.service_subscriber }

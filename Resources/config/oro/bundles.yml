@@ -1,0 +1,2 @@
+bundles:
+    - { name: YsTools\Bundle\OroCommerceElfsightBundle\YsToolsOroCommerceElfsightBundle, priority: 1000 }

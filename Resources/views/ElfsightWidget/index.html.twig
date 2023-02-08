@@ -1,0 +1,26 @@
+{% extends '@OroUI/actions/index.html.twig' %}
+{% import '@OroUI/macros.html.twig' as UI %}
+{#{% set gridName = 'contacts-grid' %} TODO: add grid #}
+{#{% set pageTitle = 'oro.contact.entity_plural_label'|trans %} TODO: add translations #}
+{% set pageTitle = 'Elfsight Widgets' %}
+
+{% block script %}
+    {{ parent() }}
+
+    <script src="https://elfsight.com/embed-sdk.js"></script>
+{% endblock %}
+
+{% block navButtons %}
+    <h3>Create button</h3>
+    <div id="elfsight-create-button-container">
+    <script type="application/javascript">
+        const container = document.querySelector('#elfsight-create-button-container');
+        const callback = function(response) {
+            // button callback logic
+        };
+        const options = { appAlias: '' };
+
+        // ElfsightEmbedSDK.setReferral('referralId'); // TODO: add referral ID
+        ElfsightEmbedSDK.displayCreateButton(container, callback, options);
+    </script>
+{% endblock %}

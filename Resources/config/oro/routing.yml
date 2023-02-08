@@ -1,0 +1,4 @@
+oro_customer:
+    resource:     "@YsToolsOroCommerceElfsightBundle/Controller/ElfsightWidgetController.php"
+    type:         annotation
+    prefix:       /elfsight-widget

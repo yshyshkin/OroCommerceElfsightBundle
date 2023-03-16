@@ -6,21 +6,38 @@
 
 {% block script %}
     {{ parent() }}
-
     <script src="https://elfsight.com/embed-sdk.js"></script>
 {% endblock %}
 
 {% block navButtons %}
-    <h3>Create button</h3>
-    <div id="elfsight-create-button-container">
-    <script type="application/javascript">
-        const container = document.querySelector('#elfsight-create-button-container');
-        const callback = function(response) {
-            // button callback logic
-        };
-        const options = { appAlias: '' };
-
-        // ElfsightEmbedSDK.setReferral('referralId'); // TODO: add referral ID
-        ElfsightEmbedSDK.displayCreateButton(container, callback, options);
-    </script>
+    {% if oro_config_value('ystools_orocommerce_elfsight.registered') %}
+        {# TODO: add JS component #}
+        <div id="elfsight-create-button-container"></div>
+        <script type="application/javascript">
+            const container = document.querySelector('#elfsight-create-button-container');
+            const callback = function(response) {
+                console.log(response);
+                // TODO: remove log and add button callback logic
+            };
+            const options = {
+                type: 'create',
+                size: 'medium',
+                text: '{{ 'ystools_orocommerce_elfsight.buttons.create'|trans }}',
+                colors: ['#0c809e', '#fff'],
+                icon: false
+            };
+            ElfsightEmbedSDK.displayButton(container, callback, options);
+        </script>
+    {% else %}
+        {#        {% if is_granted('oro_product_create') %}#}
+        {#            TODO: add ACL check #}
+        <div class="btn-group pull-right">
+            {{ UI.addButton({
+                'path': path('ystools_orocommerce_elfsight_register'),
+                'label': 'ystools_orocommerce_elfsight.buttons.register'|trans,
+                'aCss': 'btn-success'
+            }) }}
+        </div>
+        {#        {% endif %}#}
+    {% endif %}
 {% endblock %}

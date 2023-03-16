@@ -3,6 +3,9 @@ services:
         public: true
 
     YsTools\Bundle\OroCommerceElfsightBundle\Controller\ElfsightWidgetController:
+        arguments:
+            - '@oro_config.organization'
+            - '@oro_security.token_accessor'
         calls:
             - ['setContainer', ['@Psr\Container\ContainerInterface']]
         tags:

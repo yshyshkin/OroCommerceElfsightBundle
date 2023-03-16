@@ -1,2 +1,7 @@
 ystools_orocommerce_elfsight:
+    navigation:
+        title: 'Elfsight Widgets'
+    buttons:
+        register: 'Sign Up or Log In to Elfsight'
+        create: 'Create Widget'
 

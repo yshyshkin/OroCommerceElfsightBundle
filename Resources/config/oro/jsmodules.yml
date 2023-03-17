@@ -1,0 +1,3 @@
+dynamic-imports:
+    ystools_orocommerce_elfsight:
+        - ystoolsorocommerceelfsight/js/components/create-elfsight-widget-component

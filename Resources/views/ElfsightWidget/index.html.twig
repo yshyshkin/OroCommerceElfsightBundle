@@ -11,23 +11,16 @@
 
 {% block navButtons %}
     {% if oro_config_value('ystools_orocommerce_elfsight.registered') %}
-        {# TODO: add JS component #}
-        <div id="elfsight-create-button-container"></div>
-        <script type="application/javascript">
-            const container = document.querySelector('#elfsight-create-button-container');
-            const callback = function(response) {
-                console.log(response);
-                // TODO: remove log and add button callback logic
-            };
-            const options = {
-                type: 'create',
-                size: 'medium',
-                text: '{{ 'ystools_orocommerce_elfsight.buttons.create'|trans }}',
-                colors: ['#0c809e', '#fff'],
-                icon: false
-            };
-            ElfsightEmbedSDK.displayButton(container, callback, options);
-        </script>
+        <div data-page-component-module="ystoolsorocommerceelfsight/js/components/create-elfsight-widget-component"
+            data-page-component-options="{{ {
+                buttonOptions: {
+                    type: 'create',
+                    size: 'medium',
+                    text: 'ystools_orocommerce_elfsight.buttons.create'|trans,
+                    colors: ['#0c809e', '#fff'],
+                    icon: false
+                }
+            }|json_encode }}"></div>
     {% else %}
         {#        {% if is_granted('oro_product_create') %}#}
         {#            TODO: add ACL check #}

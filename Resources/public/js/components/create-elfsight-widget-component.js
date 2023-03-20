@@ -3,6 +3,7 @@ define(function (require) {
 
     const BaseComponent = require('oroui/js/app/components/base/component');
     const EntityModel = require('oroentity/js/app/models/entity-model');
+    const mediator = require('oroui/js/mediator');
 
     const CreateElfsightWidgetComponent = BaseComponent.extend({
         /**
@@ -13,10 +14,18 @@ define(function (require) {
         },
 
         _onCreate: function (response) {
-            // model = new EntityModel({data: {type: 'task', id: '12'}});
+            const model = new EntityModel({data: {
+                type: 'orocommerceelfsightelfsightwidgets',
+                id: null,
+                attributes: {
+                    identifier: response.id,
+                    name: 'Widget #' + response.id
+                }
+            }});
+            model.save();
 
-            console.log(response);
-            // TODO: remove log and add button callback logic
+            // TODO: add grid refresh
+            // mediator.trigger('datagrid:doRefresh:' + gridname);
         }
     });
 

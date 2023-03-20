@@ -3,11 +3,13 @@
 namespace YsTools\Bundle\OroCommerceElfsightBundle\Controller;
 
 use Oro\Bundle\ConfigBundle\Config\ConfigManager;
+use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
 use Oro\Bundle\SecurityBundle\Authentication\TokenAccessor;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Annotation\Route;
+use YsTools\Bundle\OroCommerceElfsightBundle\Entity\ElfsightWidget;
 
 class ElfsightWidgetController extends AbstractController
 {
@@ -20,20 +22,18 @@ class ElfsightWidgetController extends AbstractController
     /**
      * @Route("/", name="ystools_orocommerce_elfsight_index")
      * @Template
-     *
-     * TODO: cover with ACL
+     * @AclAncestor("elfsight_widget_view")
      */
     public function indexAction(): array
     {
         return [
-//            'entity_class' => Contact::class
+            'entity_class' => ElfsightWidget::class
         ];
     }
 
     /**
      * @Route("/register", name="ystools_orocommerce_elfsight_register")
-     *
-     * TODO: cover with ACL
+     * @AclAncestor("elfsight_widget_create")
      */
     public function registerAction()
     {

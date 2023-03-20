@@ -1,0 +1,28 @@
+acls:
+    elfsight_widget_view:
+        type: entity
+        class: YsToolsOroCommerceElfsightBundle:ElfsightWidget
+        permission: VIEW
+        group_name: ""
+        bindings: ~
+
+    elfsight_widget_create:
+        type: entity
+        class: YsToolsOroCommerceElfsightBundle:ElfsightWidget
+        permission: CREATE
+        group_name: ""
+        bindings: ~
+
+    elfsight_widget_update:
+        type: entity
+        class: YsToolsOroCommerceElfsightBundle:ElfsightWidget
+        permission: EDIT
+        group_name: ""
+        bindings: ~
+
+    elfsight_widget_delete:
+        type: entity
+        class: YsToolsOroCommerceElfsightBundle:ElfsightWidget
+        permission: DELETE
+        group_name: ""
+        bindings: ~

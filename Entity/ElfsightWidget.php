@@ -3,6 +3,7 @@
 namespace YsTools\Bundle\OroCommerceElfsightBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Oro\Bundle\EntityBundle\EntityProperty\DatesAwareTrait;
 use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
 use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
@@ -11,6 +12,7 @@ use Oro\Bundle\OrganizationBundle\Entity\Organization;
 /**
  * @ORM\Entity
  * @ORM\Table(name="ystools_elfsight_widget")
+ * @ORM\HasLifecycleCallbacks()
  * @Config(
  *      defaultValues={
  *          "entity"={
@@ -34,6 +36,7 @@ use Oro\Bundle\OrganizationBundle\Entity\Organization;
 class ElfsightWidget implements ExtendEntityInterface
 {
     use ExtendEntityTrait;
+    use DatesAwareTrait;
 
     /**
      * @ORM\Id
@@ -123,5 +126,22 @@ class ElfsightWidget implements ExtendEntityInterface
     public function getOrganization()
     {
         return $this->organization;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function prePersist()
+    {
+        $this->createdAt = new \DateTime('now', new \DateTimeZone('UTC'));
+        $this->updatedAt = new \DateTime('now', new \DateTimeZone('UTC'));
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function preUpdate()
+    {
+        $this->updatedAt = new \DateTime('now', new \DateTimeZone('UTC'));
     }
 }

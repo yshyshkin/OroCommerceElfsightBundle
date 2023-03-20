@@ -1,7 +1,13 @@
-ystools_orocommerce_elfsight:
-    navigation:
-        title: 'Elfsight Widgets'
-    buttons:
-        register: 'Sign Up or Log In to Elfsight'
-        create: 'Create Widget'
+ystools:
+    orocommerceelfsight:
+        elfsightwidget:
+            entity_label: 'Elfsight Widget'
+            entity_plural_label: 'Elfsight Widgets'
+            id.label: 'ID'
+            identifier.label: 'Identifier'
+            name.label: 'Name'
+            organization.label: 'Organization'
 
+        buttons:
+            register: 'Sign Up or Log In to Elfsight'
+            create: 'Create Widget'

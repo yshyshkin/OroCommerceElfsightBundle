@@ -26,6 +26,8 @@ class OroCommerceElfsightBundleInstaller implements Installation
         $table->addColumn('identifier', 'string', ['length' => 255]);
         $table->addColumn('name', 'string', ['length' => 255]);
         $table->addColumn('organization_id', 'integer', ['notnull' => false]);
+        $table->addColumn('created_at', 'datetime', []);
+        $table->addColumn('updated_at', 'datetime', []);
         $table->setPrimaryKey(['id']);
         $table->addUniqueIndex(['identifier']);
 

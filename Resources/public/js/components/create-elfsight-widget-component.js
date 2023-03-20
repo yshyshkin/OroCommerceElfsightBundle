@@ -19,13 +19,12 @@ define(function (require) {
                 id: null,
                 attributes: {
                     identifier: response.id,
-                    name: 'Widget #' + response.id
+                    name: response.app + ' ' + response.id
                 }
             }});
             model.save();
 
-            // TODO: add grid refresh
-            // mediator.trigger('datagrid:doRefresh:' + gridname);
+            mediator.trigger('datagrid:doRefresh:ystools-elfsight-widget-grid');
         }
     });
 

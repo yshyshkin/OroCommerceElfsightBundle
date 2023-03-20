@@ -2,7 +2,7 @@ navigation:
     menu_config:
         items:
             elfsight_widgets_list:
-                label:           'ystools_orocommerce_elfsight.navigation.title'
+                label:           'ystools.orocommerceelfsight.elfsightwidget.entity_plural_label'
                 route:           'ystools_orocommerce_elfsight_index'
                 position:        1000
         tree:

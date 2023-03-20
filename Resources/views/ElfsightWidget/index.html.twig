@@ -1,8 +1,7 @@
 {% extends '@OroUI/actions/index.html.twig' %}
 {% import '@OroUI/macros.html.twig' as UI %}
-{#{% set gridName = 'contacts-grid' %} TODO: add grid #}
-{#{% set pageTitle = 'oro.contact.entity_plural_label'|trans %} TODO: add translations #}
-{% set pageTitle = 'Elfsight Widgets' %}
+{% set gridName = 'ystools-elfsight-widget-grid' %}
+{% set pageTitle = 'ystools.orocommerceelfsight.elfsightwidget.entity_plural_label'|trans %}
 
 {% block script %}
     {{ parent() }}
@@ -10,27 +9,26 @@
 {% endblock %}
 
 {% block navButtons %}
-    {% if oro_config_value('ystools_orocommerce_elfsight.registered') %}
-        <div data-page-component-module="ystoolsorocommerceelfsight/js/components/create-elfsight-widget-component"
-            data-page-component-options="{{ {
-                buttonOptions: {
-                    type: 'create',
-                    size: 'medium',
-                    text: 'ystools_orocommerce_elfsight.buttons.create'|trans,
-                    colors: ['#0c809e', '#fff'],
-                    icon: false
-                }
-            }|json_encode }}"></div>
-    {% else %}
-        {#        {% if is_granted('oro_product_create') %}#}
-        {#            TODO: add ACL check #}
-        <div class="btn-group pull-right">
-            {{ UI.addButton({
-                'path': path('ystools_orocommerce_elfsight_register'),
-                'label': 'ystools_orocommerce_elfsight.buttons.register'|trans,
-                'aCss': 'btn-success'
-            }) }}
-        </div>
-        {#        {% endif %}#}
+    {% if is_granted('elfsight_widget_create') %}
+        {% if oro_config_value('ystools_orocommerce_elfsight.registered') %}
+            <div data-page-component-module="ystoolsorocommerceelfsight/js/components/create-elfsight-widget-component"
+                data-page-component-options="{{ {
+                    buttonOptions: {
+                        type: 'create',
+                        size: 'medium',
+                        text: 'ystools.orocommerceelfsight.buttons.create'|trans,
+                        colors: ['#0c809e', '#fff'],
+                        icon: false
+                    }
+                }|json_encode }}"></div>
+        {% else %}
+            <div class="btn-group pull-right">
+                {{ UI.addButton({
+                    'path': path('ystools_orocommerce_elfsight_register'),
+                    'label': 'ystools.orocommerceelfsight.buttons.register'|trans,
+                    'aCss': 'btn-success'
+                }) }}
+            </div>
+        {% endif %}
     {% endif %}
 {% endblock %}

@@ -26,13 +26,11 @@ define(function (require) {
                     type: 'orocommerceelfsightelfsightwidgets',
                     id: this.entityId
                 }});
-                model.on('destroy', function () {
+                model.on('sync', function () {
                     mediator.execute('showFlashMessage', 'success', this.successMessage);
                     mediator.trigger('datagrid:doRefresh:ystools-elfsight-widget-grid');
                 }.bind(this));
                 model.destroy();
-
-                return true;
             }
         }
     });

@@ -1,1 +1,34 @@
-{{ record.getValue('id') }}
+<div class="elfsight-action-container">
+    {% if is_granted('elfsight_widget_update') %}
+        <div class="elfsight-action-button" id="edit-elfsight-widget-{{ record.getValue('id') }}"
+             data-page-component-module="ystoolsorocommerceelfsight/js/components/edit-elfsight-widget-component"
+             data-page-component-options="{{ {
+                 buttonOptions: {
+                     type: 'edit',
+                     widgetId: record.getValue('identifier'),
+                     size: 'medium',
+                     text: 'ystools.orocommerceelfsight.buttons.edit'|trans,
+                     colors: ['#478507', '#fff'],
+                     icon: false
+                 },
+                 successMessage: 'ystools.orocommerceelfsight.messages.edit_success'|trans
+             }|json_encode }}"></div>
+    {% endif %}
+
+    {% if is_granted('elfsight_widget_delete') %}
+        <div class="elfsight-action-button" id="remove-elfsight-widget-{{ record.getValue('id') }}"
+              data-page-component-module="ystoolsorocommerceelfsight/js/components/remove-elfsight-widget-component"
+              data-page-component-options="{{ {
+                  buttonOptions: {
+                      type: 'remove',
+                      widgetId: record.getValue('identifier'),
+                      size: 'medium',
+                      text: 'ystools.orocommerceelfsight.buttons.remove'|trans,
+                      colors: ['#e62600', '#fff'],
+                      icon: false
+                  },
+                  entityId: record.getValue('id'),
+                  successMessage: 'ystools.orocommerceelfsight.messages.remove_success'|trans
+              }|json_encode }}"></div>
+    {% endif %}
+</div>

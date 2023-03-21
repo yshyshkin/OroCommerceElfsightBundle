@@ -10,21 +10,24 @@ define(function (require) {
          * @inheritdoc
          */
         initialize: function (options) {
-            ElfsightEmbedSDK.displayButton(options._sourceElement[0], this._onCreate, options.buttonOptions);
+            ElfsightEmbedSDK.displayButton(options._sourceElement[0], this._onCreate.bind(this), options.buttonOptions);
         },
 
         _onCreate: function (response) {
-            const model = new EntityModel({data: {
-                type: 'orocommerceelfsightelfsightwidgets',
-                id: null,
-                attributes: {
-                    identifier: response.id,
-                    name: response.app + ' ' + response.id
-                }
-            }});
-            model.save();
-
-            mediator.trigger('datagrid:doRefresh:ystools-elfsight-widget-grid');
+            if (response.id && response.app) {
+                const model = new EntityModel({data: {
+                    type: 'orocommerceelfsightelfsightwidgets',
+                    id: null,
+                    attributes: {
+                        identifier: response.id,
+                        name: response.app + ' ' + response.id
+                    }
+                }});
+                model.on('sync', function () {
+                    mediator.trigger('datagrid:doRefresh:ystools-elfsight-widget-grid');
+                });
+                model.save();
+            }
         }
     });
 

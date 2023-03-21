@@ -11,3 +11,8 @@ ystools:
         buttons:
             register: 'Sign Up or Log In to Elfsight'
             create: 'Create Widget'
+            edit: 'Edit'
+            remove: 'Delete'
+        messages:
+            edit_success: 'Widget has been successfully saved'
+            remove_success: 'Widget has been successfully removed'

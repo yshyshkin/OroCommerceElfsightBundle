@@ -1,18 +1,18 @@
 ystools:
     orocommerceelfsight:
         elfsightwidget:
-            entity_label: 'Elfsight Widget'
-            entity_plural_label: 'Elfsight Widgets'
-            id.label: 'ID'
-            identifier.label: 'Identifier'
-            name.label: 'Name'
-            organization.label: 'Organization'
+            identifier.label: 'Elfsight Widget'
 
         buttons:
             register: 'Sign Up or Log In to Elfsight'
             create: 'Create Widget'
-            edit: 'Edit'
-            remove: 'Delete'
+            edit: 'Edit Widget'
         messages:
+            create_success: 'Widget has been successfully created'
             edit_success: 'Widget has been successfully saved'
-            remove_success: 'Widget has been successfully removed'
+
+        content_widget_type:
+            elfsight_widget:
+                label: 'Elfsight Widget'
+            sections:
+                options: 'Options'

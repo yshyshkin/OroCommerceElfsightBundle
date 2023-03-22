@@ -1,3 +1,0 @@
-api:
-    entities:
-        YsTools\Bundle\OroCommerceElfsightBundle\Entity\ElfsightWidget: ~

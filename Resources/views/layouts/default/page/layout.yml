@@ -1,0 +1,9 @@
+layout:
+    actions:
+        - '@add':
+              id: elfsight_platform_js
+              parentId: body
+              blockType: script
+              options:
+                  src: 'https://apps.elfsight.com/p/platform.js'
+                  defer: true

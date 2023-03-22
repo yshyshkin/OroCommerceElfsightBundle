@@ -1,1 +1,10 @@
 services:
+    ystools_orocommerce_elfsight.form.type.elfsight_widget_settings:
+        class: 'YsTools\Bundle\OroCommerceElfsightBundle\Form\Type\ElfsightWidgetSettingsType'
+        tags:
+            - { name: form.type }
+
+    ystools_orocommerce_elfsight.content_widget.elfsight_widget:
+        class: 'YsTools\Bundle\OroCommerceElfsightBundle\ContentWidget\ElfsightWidgetType'
+        tags:
+            - { name: oro_cms.content_widget.type }

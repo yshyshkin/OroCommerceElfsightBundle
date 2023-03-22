@@ -1,0 +1,15 @@
+{% import '@OroUI/macros.html.twig' as UI %}
+
+{% if identifier is defined %}
+    {% set identifier_content %}
+        {{ identifier }}
+        <a href="#" title="ystools.orocommerceelfsight.buttons.edit"
+           data-page-component-module="ystoolsorocommerceelfsight/js/components/edit-elfsight-widget-component"
+           data-page-component-options="{{ {
+               identifier: identifier,
+               successMessage: 'ystools.orocommerceelfsight.messages.edit_success'|trans
+           }|json_encode }}"><span class="fa-edit" aria-hidden="true"></span></a>
+    {% endset %}
+
+    {{ UI.renderHtmlProperty('ystools.orocommerceelfsight.elfsightwidget.identifier.label'|trans, identifier_content) }}
+{% endif %}

@@ -1,0 +1,9 @@
+placeholders:
+    placeholders:
+        scripts_after:
+            items:
+                elfsight_sdk:
+                    order: 200
+    items:
+        elfsight_sdk:
+            template: '@@YsToolsOroCommerceElfsight/ElfsightWidget/elfsight_embed_sdk.html.twig'

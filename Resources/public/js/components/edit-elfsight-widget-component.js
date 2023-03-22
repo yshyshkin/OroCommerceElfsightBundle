@@ -5,14 +5,17 @@ define(function (require) {
     const mediator = require('oroui/js/mediator');
 
     const EditElfsightWidgetComponent = BaseComponent.extend({
+        identifier: null,
         successMessage: null,
 
-        /**
-         * @inheritdoc
-         */
         initialize: function (options) {
+            this.identifier = options.identifier;
             this.successMessage = options.successMessage;
-            ElfsightEmbedSDK.displayButton(options._sourceElement[0], this._onEdit.bind(this), options.buttonOptions);
+            options._sourceElement.click(this._onClick.bind(this));
+        },
+
+        _onClick: function () {
+            ElfsightEmbedSDK.editWidget(this.identifier).then(this._onEdit.bind(this));
         },
 
         _onEdit: function () {

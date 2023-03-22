@@ -4,6 +4,11 @@ services:
         tags:
             - { name: form.type }
 
+    ystools_orocommerce_elfsight.form.type.elfsight_widget_identifier:
+        class: 'YsTools\Bundle\OroCommerceElfsightBundle\Form\Type\ElfsightWidgetIdentifierType'
+        tags:
+            - { name: form.type }
+
     ystools_orocommerce_elfsight.content_widget.elfsight_widget:
         class: 'YsTools\Bundle\OroCommerceElfsightBundle\ContentWidget\ElfsightWidgetType'
         tags:

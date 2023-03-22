@@ -1,7 +1,7 @@
 {
     "name": "ys-tools/orocommerce-elfsight-bundle",
     "description": "OroCommerce Elfsight Integration Bundle",
-    "keywords": ["oro","commerce","elfsight","integration","configuration"],
+    "keywords": ["oro","commerce","elfsight","integration","bundle"],
     "homepage": "https://github.com/yshyshkin/OroCommerceElfsightBundle",
     "type": "symfony-bundle",
     "license": "MIT",

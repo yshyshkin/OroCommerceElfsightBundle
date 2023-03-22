@@ -3,7 +3,6 @@
 namespace YsTools\Bundle\OroCommerceElfsightBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
@@ -19,7 +18,7 @@ class ElfsightWidgetSettingsType extends AbstractType
     {
         $builder->add(
             'identifier',
-            TextType::class,
+            ElfsightWidgetIdentifierType::class,
             [
                 'label' => 'ystools.orocommerceelfsight.elfsightwidget.identifier.label',
                 'required' => true,

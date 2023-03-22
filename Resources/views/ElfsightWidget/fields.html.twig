@@ -1,0 +1,38 @@
+{%- block elfsight_identifier_widget -%}
+    {% set field_id = form.vars.id %}
+    {% set create_button_id = form.vars.id ~ '-create' %}
+    {% set hidden_create_button_id = form.vars.id ~ '-hidden-create' %}
+    {% set edit_button_id = form.vars.id ~ '-edit' %}
+    {% set reset_button_id = form.vars.id ~ '-reset' %}
+
+    <div data-page-component-module="ystoolsorocommerceelfsight/js/components/elfsight-identifier-form-component"
+         data-page-component-options="{{ {
+             inputId: field_id,
+             createButtonId: create_button_id,
+             hiddenCreateButtonId: hidden_create_button_id,
+             editButtonId: edit_button_id,
+             resetButtonId: reset_button_id,
+             createSuccessMessage: 'ystools.orocommerceelfsight.messages.create_success'|trans,
+             editSuccessMessage: 'ystools.orocommerceelfsight.messages.edit_success'|trans
+        }|json_encode }}">
+        <div class="elfsight-identifier-input">
+            {{ form_widget(form) }}
+        </div>
+        <button id="{{ create_button_id }}" class="btn btn-icon btn-square-default elfsight-form-button" type="button"
+                title="{{ 'ystools.orocommerceelfsight.buttons.create'|trans }}"
+                aria-label="{{ 'ystools.orocommerceelfsight.buttons.create'|trans }}" aria-invalid="false">
+            <span class="fa-plus fa-offset-none" aria-hidden="true"></span>
+        </button>
+        <div id="{{ hidden_create_button_id }}"></div>
+        <button id="{{ edit_button_id }}" class="btn btn-icon btn-square-default elfsight-form-button" type="button"
+                title="{{ 'ystools.orocommerceelfsight.buttons.edit'|trans }}"
+                aria-label="{{ 'ystools.orocommerceelfsight.buttons.edit'|trans }}" aria-invalid="false">
+            <span class="fa-edit fa-offset-none" aria-hidden="true"></span>
+        </button>
+        <button id="{{ reset_button_id }}" class="btn btn-icon btn-square-default elfsight-form-button" type="button"
+                title="{{ 'ystools.orocommerceelfsight.buttons.reset'|trans }}"
+                aria-label="{{ 'ystools.orocommerceelfsight.buttons.reset'|trans }}" aria-invalid="false">
+            <span class="fa-close fa-offset-none" aria-hidden="true"></span>
+        </button>
+    </div>
+{%- endblock elfsight_identifier_widget -%}

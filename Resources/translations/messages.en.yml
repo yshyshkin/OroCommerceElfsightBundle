@@ -7,9 +7,10 @@ ystools:
             register: 'Sign Up or Log In to Elfsight'
             create: 'Create Widget'
             edit: 'Edit Widget'
+            reset: 'Reset Widget'
         messages:
-            create_success: 'Widget has been successfully created'
-            edit_success: 'Widget has been successfully saved'
+            create_success: 'Elfsight widget has been successfully created. Now you need to save this content widget.'
+            edit_success: 'Elfsight widget has been successfully saved. Now you need to save this content widget.'
 
         content_widget_type:
             elfsight_widget:

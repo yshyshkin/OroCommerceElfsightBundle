@@ -1,8 +1,7 @@
-.elfsight-action-container {
-    text-align: right;
+.elfsight-form-button {
+    margin-left: 3px;
 }
 
-.elfsight-action-button {
-    display: inline-block;
-    padding-left: 3px;
+.elfsight-identifier-input {
+    float: left;
 }

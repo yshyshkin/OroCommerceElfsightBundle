@@ -1,0 +1,20 @@
+layout:
+    actions:
+        - '@add':
+              id: placeholder_checkout_content_before
+              blockType: content_block
+              parentId: page_content
+              prepend: true
+              options:
+                  alias: 'placeholder-checkout-content-before'
+                  vars:
+                      hideTitle: true
+        - '@add':
+              id: placeholder_checkout_content_after
+              blockType: content_block
+              parentId: page_content
+              siblingId: checkout_content
+              options:
+                  alias: 'placeholder-checkout-content-after'
+                  vars:
+                      hideTitle: true

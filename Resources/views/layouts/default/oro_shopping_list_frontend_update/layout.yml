@@ -1,0 +1,19 @@
+layout:
+    actions:
+        - '@add':
+              id: placeholder_sl_content_before
+              blockType: content_block
+              parentId: page_content
+              prepend: true
+              options:
+                  alias: 'placeholder-sl-content-before'
+                  vars:
+                      hideTitle: true
+        - '@add':
+              id: placeholder_sl_content_after
+              blockType: content_block
+              parentId: page_content
+              options:
+                  alias: 'placeholder-sl-content-after'
+                  vars:
+                      hideTitle: true

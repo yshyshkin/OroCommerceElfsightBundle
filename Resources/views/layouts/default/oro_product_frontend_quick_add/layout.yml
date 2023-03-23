@@ -1,0 +1,19 @@
+layout:
+    actions:
+        - '@add':
+              id: placeholder_qof_content_before
+              blockType: content_block
+              parentId: page_content
+              prepend: true
+              options:
+                  alias: 'placeholder-qof-content-before'
+                  vars:
+                      hideTitle: true
+        - '@add':
+              id: placeholder_qof_content_after
+              blockType: content_block
+              parentId: page_content
+              options:
+                  alias: 'placeholder-qof-content-after'
+                  vars:
+                      hideTitle: true

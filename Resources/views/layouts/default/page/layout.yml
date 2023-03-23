@@ -7,3 +7,46 @@ layout:
               options:
                   src: 'https://apps.elfsight.com/p/platform.js'
                   defer: true
+        - '@add':
+              id: placeholder_general_header_before
+              blockType: content_block
+              parentId: page_header
+              siblingId: top_nav_container
+              options:
+                  alias: 'placeholder-general-header-before'
+                  vars:
+                      hideTitle: true
+        - '@add':
+              id: placeholder_general_header_after
+              blockType: content_block
+              parentId: page_header
+              options:
+                  alias: 'placeholder-general-header-after'
+                  vars:
+                      hideTitle: true
+        - '@add':
+              id: placeholder_general_menu_after
+              blockType: content_block
+              parentId: page_main
+              prepend: true
+              options:
+                  alias: 'placeholder-general-menu-after'
+                  vars:
+                      hideTitle: true
+        - '@add':
+              id: placeholder_general_footer_before
+              blockType: content_block
+              parentId: page_footer
+              prepend: true
+              options:
+                  alias: 'placeholder-general-footer-before'
+                  vars:
+                      hideTitle: true
+        - '@add':
+              id: placeholder_general_footer_after
+              blockType: content_block
+              parentId: page_footer
+              options:
+                  alias: 'placeholder-general-footer-after'
+                  vars:
+                      hideTitle: true

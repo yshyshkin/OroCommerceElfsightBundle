@@ -2,7 +2,7 @@ services:
     _defaults:
         public: true
 
-    YsTools\Bundle\OroCommerceElfsightBundle\Controller\ElfsightWidgetController:
+    YsTools\Bundle\OroCommerceElfsightBundle\Controller\ElfsightController:
         arguments:
             - '@security.token_storage'
             - '@oro_config.user'

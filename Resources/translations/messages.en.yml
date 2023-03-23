@@ -4,7 +4,8 @@ ystools:
             identifier.label: 'Elfsight Widget'
 
         buttons:
-            register: 'Sign Up or Log In to Elfsight'
+            register: 'Sign Up | Log In to Elfsight'
+            manage: 'Manage Elfsight Widgets'
             create: 'Create Widget'
             edit: 'Edit Widget'
             reset: 'Reset Widget'

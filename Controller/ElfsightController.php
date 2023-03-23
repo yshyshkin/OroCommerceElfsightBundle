@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
-class ElfsightWidgetController extends AbstractController
+class ElfsightController extends AbstractController
 {
     public function __construct(
         private TokenStorageInterface $tokenStorage,

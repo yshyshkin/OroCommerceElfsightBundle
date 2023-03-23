@@ -2,8 +2,15 @@ placeholders:
     placeholders:
         scripts_after:
             items:
-                elfsight_sdk:
+                elfsight_embed_sdk:
                     order: 200
+        index_navButtons_before:
+            items:
+                elfsight_redirect_button:
+                    order: 100
     items:
-        elfsight_sdk:
-            template: '@@YsToolsOroCommerceElfsight/ElfsightWidget/elfsight_embed_sdk.html.twig'
+        elfsight_embed_sdk:
+            template: '@@YsToolsOroCommerceElfsight/ElfsightWidget/embed_sdk.html.twig'
+        elfsight_redirect_button:
+            template: '@@YsToolsOroCommerceElfsight/ElfsightWidget/redirect_button.html.twig'
+            applicable: '@oro_ui.placeholder.filter->isSame($entity_class$, Oro\Bundle\CMSBundle\Entity\ContentWidget)'

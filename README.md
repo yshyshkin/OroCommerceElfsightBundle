@@ -1,6 +1,6 @@
-# OroCommerceElfsightBundle
+# OroCommerce Elfsight Bundle
 
-The bundle adds OroCommerce integration with the [Elfsight](https://go.elfsight.io/click?pid=233&offer_id=3) 
+The bundle adds integration with the [Elfsight](https://go.elfsight.io/click?pid=233&offer_id=3) 
 widget provider, and puts multiple content blocks into strategic places all over the application storefront.
 
 Now developers can add custom forms, subscription forms, live chats, various popups, countdown timers, 
@@ -15,6 +15,14 @@ social feeds and many other types widgets to the storefront.
     * [Social Feed](#social-feed)
     * [Other Widgets](#other-widgets)
 * [Content Blocks](#content-blocks)
+    * [All Pages](#all-pages)
+    * [Home Page](#home-page)
+    * [Search Results Page](#search-results-page)
+    * [Product Listing Page](#product-listing-page)
+    * [Product Details Page](#product-details-page)
+    * [Quick Order Form Page](#quick-order-form-page)
+    * [Shopping List Page](#shopping-list-page)
+    * [Checkout Page](#checkout-page)
 * [How To Install The Bundle](#how-to-install-the-bundle)
 * [How To Add Widgets](#how-to-add-widgets)
 * [How To Thank The Author](#how-to-thank-the-author)
@@ -74,6 +82,76 @@ Check the [full list of widgets](https://elfsight.com/widgets/) and find the bes
 
 
 ## Content Blocks
+
+By default, you can add Elfsight widgets to any place that supports content widgets: landing pages, 
+product and category descriptions, predefined content blocks. 
+
+This bundle adds new content blocks to different pages all over the application, so you can add Elfsight 
+widgets to any of that blocks. Some Elfsight widgets that are always presented on screen (e.g. live chat, popup) 
+can be added to any block. Other widgets that have to be added to the right place on the page (e.g. forms, social feeds)
+should be added to the right content block.
+
+Here are all pages with new content blocks added to them.
+
+### All Pages
+
+* `placeholder-general-header-before` added before the header;
+* `placeholder-general-header-after` added after the header;
+* `placeholder-general-menu-after` added after the main menu;
+* `placeholder-general-footer-before` added before the footer;
+* `placeholder-general-footer-after` added after the footer.
+
+![General Placeholders](Resources/doc/img/placeholders_general.png)
+
+### Home Page
+
+* `placeholder-home-content-before` added before the home page content;
+* `placeholder-home-content-after` added after the home page content.
+
+![Home Page Placeholders](Resources/doc/img/placeholders_home_page.png)
+
+### Search Results Page
+
+* `placeholder-search-content-before` added before the search results grid;
+* `placeholder-search-content-after` added after the search results grid.
+
+![Search Results Page Placeholders](Resources/doc/img/placeholders_search_results.png)
+
+### Product Listing Page
+
+* `placeholder-plp-content-before` added before the products grid;
+* `placeholder-plp-content-after` added after the products grid.
+
+![Product Listing Page Placeholders](Resources/doc/img/placeholders_plp.png)
+
+### Product Details Page
+
+* `placeholder-pdp-content-before` added before the product details;
+* `placeholder-pdp-content-after` added after the products details.
+
+![Product Details Page Placeholders](Resources/doc/img/placeholders_pdp.png)
+
+### Quick Order Form Page
+
+* `placeholder-qof-content-before` added before the quick order form;
+* `placeholder-qof-content-after` added after the quick order form.
+
+![Quick Order Form Placeholders](Resources/doc/img/placeholders_qof.png)
+
+### Shopping List Page
+
+* `placeholder-sl-content-before` added before the shopping list content;
+* `placeholder-sl-content-after` added after the shopping list content.
+
+![Shopping List Placeholders](Resources/doc/img/placeholders_sl.png)
+
+### Checkout Page
+
+* `placeholder-checkout-content-before` added before the checkout content;
+* `placeholder-checkout-content-after` added after the checkout content.
+
+![Shopping List Placeholders](Resources/doc/img/placeholders_checkout.png)
+
 
 TODO
 

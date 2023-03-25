@@ -21,7 +21,12 @@ class ContentWidgetTypeProviderDecorator extends ContentWidgetTypeProvider
         $types = $this->originalProvider->getAvailableContentWidgetTypes();
 
         if (!$this->configManager->get('ystools_orocommerce_elfsight.registered')) {
-            unset($types['ystools.orocommerceelfsight.content_widget_type.elfsight_widget.label']);
+            foreach ($types as $key => $value) {
+                if ($value === ElfsightWidgetType::getName()) {
+                    unset($types[$key]);
+                    break;
+                }
+            }
         }
 
         return $types;

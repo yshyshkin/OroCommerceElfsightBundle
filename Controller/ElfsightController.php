@@ -12,10 +12,18 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 
 class ElfsightController extends AbstractController
 {
+    /** @var TokenStorageInterface */
+    private $tokenStorage;
+
+    /** @var ConfigManager */
+    private $configManager;
+
     public function __construct(
-        private TokenStorageInterface $tokenStorage,
-        private ConfigManager $configManager
+        TokenStorageInterface $tokenStorage,
+        ConfigManager $configManager
     ) {
+        $this->tokenStorage = $tokenStorage;
+        $this->configManager = $configManager;
     }
 
     /**

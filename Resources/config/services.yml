@@ -18,5 +18,5 @@ services:
         class: 'YsTools\Bundle\OroCommerceElfsightBundle\ContentWidget\ContentWidgetTypeProviderDecorator'
         decorates: oro_cms.provider.content_widget_type
         arguments:
-            - '@.inner'
+            - '@ystools_orocommerce_elfsight.content_widget.content_widget_type_provider_decorator.inner'
             - '@oro_config.user'

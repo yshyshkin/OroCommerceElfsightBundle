@@ -1,2 +1,2 @@
 bundles:
-    - '@YsToolsOroCommerceElfsight/ElfsightWidget/fields.html.twig'
+    - 'YsToolsOroCommerceElfsightBundle:ElfsightWidget:fields.html.twig'

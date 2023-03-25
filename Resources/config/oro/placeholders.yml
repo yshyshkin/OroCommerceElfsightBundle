@@ -10,7 +10,7 @@ placeholders:
                     order: 100
     items:
         elfsight_embed_sdk:
-            template: '@@YsToolsOroCommerceElfsight/ElfsightWidget/embed_sdk.html.twig'
+            template: 'YsToolsOroCommerceElfsightBundle:ElfsightWidget:embed_sdk.html.twig'
         elfsight_redirect_button:
-            template: '@@YsToolsOroCommerceElfsight/ElfsightWidget/redirect_button.html.twig'
+            template: 'YsToolsOroCommerceElfsightBundle:ElfsightWidget:redirect_button.html.twig'
             applicable: '@oro_ui.placeholder.filter->isSame($entity_class$, Oro\Bundle\CMSBundle\Entity\ContentWidget)'

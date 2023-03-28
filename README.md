@@ -178,6 +178,8 @@ bin/console oro:platform:update --force --env=prod
 
 ## How To Add Widgets
 
+Here is the [video that demonstrates how to add widgets](https://www.youtube.com/watch?v=tSCyaRgmEdI). All required steps are described below. 
+
 ### Registration
 
 The first thing you need to do before using Elfsight widgets is to register in the Elfsight portal. You need to open 

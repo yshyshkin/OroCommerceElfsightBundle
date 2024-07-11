@@ -3,11 +3,11 @@
 namespace YsTools\Bundle\OroCommerceElfsightBundle\Controller;
 
 use Oro\Bundle\ConfigBundle\Config\ConfigManager;
-use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
+use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 use Oro\Bundle\UserBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 class ElfsightController extends AbstractController
@@ -18,10 +18,8 @@ class ElfsightController extends AbstractController
     ) {
     }
 
-    /**
-     * @Route("/register", name="ystools_orocommerce_elfsight_register")
-     * @AclAncestor("oro_cms_content_widget_view")
-     */
+    #[\Symfony\Component\Routing\Attribute\Route(path: '/register', name: 'ystools_orocommerce_elfsight_register')]
+    #[AclAncestor('oro_cms_content_widget_view')]
     public function registerAction()
     {
         if ($this->tokenStorage->getToken()) {

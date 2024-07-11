@@ -5,7 +5,7 @@ layout:
               parentId: body
               blockType: script
               options:
-                  src: 'https://apps.elfsight.com/p/platform.js'
+                  src: 'https://static.elfsight.com/platform/platform.js'
                   defer: true
         - '@add':
               id: placeholder_general_header_before
